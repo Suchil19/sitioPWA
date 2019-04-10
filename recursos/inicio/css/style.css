@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+} 
+
+body {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+header {
+    width: 100%;
+    background: rgb(51, 51, 51);
+    position: fixed;
+    z-index: 1;
+}
+
+.menu {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    padding: .5em 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/* Aqui se alinea la palabra docqui del header y se ñe cambia el atamaño */
+.menu .container-menu .logo .logo-name a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    margin-left: 8px;
+    font-weight: normal;
+}
+
+.menu .container-menu .logo .logo-name{
+    display: flex;
+    align-items: center;
+}
+
+.menu .container-menu .logo .logo-name img {
+    width: 70px;
+}
+
+.menu .container-menu .logo .btn-menu {
+    display: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 50px;
+}
+
+/* Aqui van los enlaces */
+
+.menu .menu-link ul {
+    list-style: none;
+}
+
+.menu .menu-link ul li {
+    display: inline-block;
+}
+/* Aqui estan las propiedades de los enlaces, tamaño y color */
+.menu .menu-link ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 12px;
+    font-size: 1.2em;
+    /* aqui cambiamos la animacion del mouse en los enlaces*/
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+}
+
+/* mause cuando pase arriba */
+
+.menu .menu-link ul li a:hover {
+    border-bottom: 2px solid rgb(4, 205, 255);
+    color: rgb(0, 217, 255);
+}
+/* el banner empieza en el minuto 24 */
+.banner {
+    position: relative;
+    background: url(../img/docqui.png);
+    width: 100%;
+    max-width: 1100px;
+    top: 52px;
+    margin: auto;
+    height: 400px;
+    color: #fff;
+}
+/* Aqui esta el efecto del menu dezpegable */
+@media screen and (max-width: 700px){
+    .menu .container-menu .logo .btn-menu {
+        display: block;
+    }
+/* Aqui la posicion de las barritas del menu */
+    .menu .container-menu{
+        width: 100%;
+    }
+
+/* Icono del menu despegable las barritas XD */
+    .menu .container-menu .logo {
+        display: flex;
+        -ms-aling-items: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Aqui esta el sombreado del menu */
+    .menu .menu-link{
+        position: absolute;
+        background: rgba(0, 0, 0,.7);
+        height: 100vh;
+        width: 100%;
+        top: 52px;
+        left: -100%;
+        z-index: 1000;
+        transition: .3s;
+    }
+    .menu .menu-link ul li {
+        display: block;
+    }
+    .menu .menu-link ul li a {
+        display: block;
+        height: 50px;
+        border-bottom: 2px solid #fff;
+        padding: 15px;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .menu .container-menu .logo .logo-name a{
+        font-size: 25px;
+    }
+    .banner .bg-details .details h1 {
+        font-size: 30px;
+    }
+
+    .banner .bg-details .details a {
+        font-size:  16px;
+        padding: 8px 15px;
+    }
+
+}
